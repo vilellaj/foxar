@@ -5,9 +5,19 @@
     <script src="https://cdn.rawgit.com/jeromeetienne/AR.js/1.6.0/aframe/build/aframe-ar.js"></script>
 </head>
 <body style='margin : 0px; overflow: hidden;'>
-    <a-scene embedded arjs='sourceType: webcam; detectionMode: mono; maxDetectionRate: 30; canvasWidth: 240; canvasHeight: 180'>
-        <a-marker type='pattern' url='/foxar/assets/pattern-marker.patt'>
+    <a-scene embedded arjs='sourceType: webcam; detectionMode: best; maxDetectionRate: 30; canvasWidth: 240; canvasHeight: 180'>
+        <a-marker type='pattern' url='/foxar/assets/fox/fox.patt'>
             <a-entity position='0 0.5 0' scale="0.2 0.2 0.2" gltf-model=”url(/foxar/assets/Fox.gltf)”>
+                <a-animation attribute="rotation" dur="10000" fill="forwards" to="0 360 0" repeat="indefinite"></a-animation>
+            </a-entity>
+        </a-marker>
+        <a-marker type='pattern' url='/foxar/assets/wolf/fox.patt'>
+            <a-entity position='0 0.5 0' scale="0.2 0.2 0.2" gltf-model=”url(/foxar/assets/Wolves.gltf)”>
+                <a-animation attribute="rotation" dur="10000" fill="forwards" to="0 360 0" repeat="indefinite"></a-animation>
+            </a-entity>
+        </a-marker>
+        <a-marker type='pattern' url='/foxar/assets/bat/bat.patt'>
+            <a-entity position='0 0.5 0' scale="0.2 0.2 0.2" gltf-model=”url(/foxar/assets/Mesh_Bat.gltf)”>
                 <a-animation attribute="rotation" dur="10000" fill="forwards" to="0 360 0" repeat="indefinite"></a-animation>
             </a-entity>
         </a-marker>
